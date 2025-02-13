@@ -1,0 +1,16 @@
+.floating-image {
+    margin: 15px;
+    display: inline-block;
+}
+
+.floating-image-img {
+    display: block;
+    height: auto;
+}
+
+.floating-image-caption {
+    text-align: center;
+    font-style: italic;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

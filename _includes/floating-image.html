@@ -1,0 +1,9 @@
+<figure class="floating-image" style="float: {{ include.align }};">
+    <img src="/assets/img/{{ include.file }}" alt="{{ include.alt }}" class="floating-image-img"
+        style="max-width: {{ include.width or 'none' }};" />
+    {% if include.caption and include.caption != "" %}
+    <figcaption class="floating-image-caption" style="max-width: {{ include.width or 'none' }};">
+        {{ include.caption | markdownify }}
+    </figcaption>
+    {% endif %}
+</figure>
