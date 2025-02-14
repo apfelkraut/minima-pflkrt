@@ -7,6 +7,8 @@
     display: block;
     height: auto;
     border-radius: 5px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
 }
 
 .floating-image-caption {
