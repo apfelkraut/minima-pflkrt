@@ -4,19 +4,18 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title | default: nil }}</h1>
   {%- endif -%}
 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-  <h1 class="post-list-heading">{{ page.list_title | default: nil }}</h1>
 
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
   {%- assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
 
   {%- for year in posts_by_year -%}
-  <h2 class="year-heading">{{ year.name }}</h2>
+  <h2 class="year-heading" id="{{ year.name | slugify }}">{{ year.name }}</h2>
   <ul class="post-list">
     {%- for post in year.items -%}
     <li>
