@@ -29,11 +29,11 @@ layout: default
   <hr style="width:50%; margin: 0 auto;" />
   <br />
   <div style="text-align: center;">
-    <svg class="svg-icon">
-      <use xlink:href="{{ '/assets/minima-social-icons.svg#mastodon' | relative_url }}"></use>
-    </svg> Feedback? Join the conversation and reply to <a
+    Feedback? Join the conversation and reply to <a
       href="https://{{ page.mastodon.instance| cgi_escape | escape}}/@{{page.mastodon.username}}/{{page.mastodon.id}}">this
-      toot</a></li>.
+      toot <svg class="svg-icon">
+      <use xlink:href="{{ '/assets/minima-social-icons.svg#mastodon' | relative_url }}"></use>
+    </svg></a>.
   </div>
   {%- endif -%}
 
