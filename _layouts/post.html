@@ -18,6 +18,8 @@ layout: default
       <span>{%- for category in page.categories -%}
         <a href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
         {%- endfor -%}</span>
+      <span>&nbsp; | &nbsp;Reading time: {{ page.content | strip_html | number_of_words | divided_by: 180 | plus: 1 }}
+        min. </span>
     </p>
   </header>
 
