@@ -12,9 +12,14 @@ layout: default
   {%- if site.posts.size > 0 -%}
 
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-  {% assign sorted_categories = site.categories %}
+  {% assign unsorted_categories = site.categories %}
+  <ul class="category-list">
+  {% for category in unsorted_categories %}
+  <li><a href="#{{ category[0] | slugify }}">{{ category[0] }}</a> ({{ category[1] | size}})</li>
+  {% endfor %}
+  </ul>
 
-  {% for category in sorted_categories %}
+  {% for category in unsorted_categories %}
   <h2 class="category-heading" id="{{ category[0] | slugify }}"> {{ category[0] }}</h2>
   <ul class="post-list">
     {% assign posts = category[1] | sort: 'date' | reverse %}
