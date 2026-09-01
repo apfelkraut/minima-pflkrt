@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-  <h1 class="post-title" style="text-align: center;">~ &nbsp; {{ page.title | default: Timeline }} | <a href="/categories/">Categories</a> | <a href="/tags/">Index</a> &nbsp; ~</h1>
+  <h1 class="post-title">~ Blog: &nbsp; {{ page.title | default: Timeline }} | <a href="/categories/">Categories</a> | <a href="/tags/">Index</a> &nbsp; ~</h1>
   {%- endif -%}
 
   {{ content }}
